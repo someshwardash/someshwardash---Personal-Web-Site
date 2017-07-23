@@ -14,29 +14,33 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import withProgressBar from 'components/ProgressBar';
 
+
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 const AppWrapper = styled.div`
-  max-width: calc(768px + 16px * 2);
+
   margin: 0 auto;
   display: flex;
   min-height: 100%;
-  padding: 0 16px;
   flex-direction: column;
 `;
 
 export function App(props) {
   return (
-    <AppWrapper>
-      <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
-        meta={[
-          { name: 'description', content: 'A React.js Boilerplate application' },
-        ]}
-      />
-      <Header />
-      {React.Children.toArray(props.children)}
-      <Footer />
-    </AppWrapper>
+    <MuiThemeProvider>
+      <AppWrapper>
+        <Helmet
+          titleTemplate="%s"
+          defaultTitle="Hi :)"
+          meta={[
+            { name: 'description', content: 'Someshwar Dash - Personal Website' },
+          ]}
+        />
+        <Header />
+        {React.Children.toArray(props.children)}
+        <Footer />
+      </AppWrapper>
+    </MuiThemeProvider>
   );
 }
 
