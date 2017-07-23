@@ -16,4 +16,8 @@ export default defineMessages({
       Made with love by {author}.
     `,
   },
+  footerTitle: {
+    id: 'boilerplate.components.Footer.footerTitle',
+    defaultMessage: 'Someshwar Dash',
+  }
 });

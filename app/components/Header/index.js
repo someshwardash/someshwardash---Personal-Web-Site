@@ -33,7 +33,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
         />
         <Drawer
           docked={false}
-          width={400}
+          width={300}
           open={this.state.open}
           onRequestChange={(open) => this.setState({open})}>
             <MenuItem onTouchTap={this.handleClose}>Home</MenuItem>

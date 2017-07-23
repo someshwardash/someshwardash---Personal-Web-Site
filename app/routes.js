@@ -19,6 +19,14 @@ export default function createRoutes(store) {
   return [
     {
       path: '/',
+      name: 'main',
+      getComponent(nextState, cb) {
+        import('containers/MainPage')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
+      path: '/home',
       name: 'home',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
